@@ -9,7 +9,7 @@ import os, sys, shutil, datetime, vintage
     #Text file of quotes added to the bottom center of the picture
 
 
-path = ("C:/Users/Sina/Desktop/picturestest")
+path = ("C:/?/?/?/picturestest")
 datestr = datetime.date.today().strftime("%d-%m-%y")
 makephotosvintage = False
 UserInput = ""
