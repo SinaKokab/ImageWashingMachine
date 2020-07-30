@@ -48,12 +48,9 @@ while (UserChosen == False):
 def resize():
     global NumberOfPhotosResized
     for item in os.listdir(path):
-        #print ("Resized!")
-        #print (item)
         item = path + "/" + item
         print(item)
         if os.path.isfile(item):
-            #print ("Resized! 2")
             im = Image.open(item)
             width, height = im.size
             f, e = os.path.splitext(item)
@@ -61,21 +58,13 @@ def resize():
             outputfiledirectory = os.path.join(path + "/resizedimages")
             if makephotosvintage == True:
                 imResize = vintage.vintage_colors(imResize)
-                #print("Make photo vintage...")
             imResize.save(f + " resized.jpg", 'JPEG', quality=90) #+ f + ' resized.jpg', 'JPEG', quality=90)
             NumberOfPhotosResized += 1
-            #print("file - " + f)
-            #f ("resized") in f:
-                #print("Moving file...")
-                #shutil.move((f+".jpg"), path + "/resizedimages")
-                #imResize.
             for xyz in os.listdir(path):
                 print(xyz)
                 if "resized" in xyz and "resizedimages" not in xyz:
-                    #print("Moving image...")
                     shutil.move(path + "/" + xyz, path + "/resizedimages/" + datestr + "/" + xyz)
 
-        #return NumberOfPhotosResized
 
 
 resize()
